@@ -1,7 +1,7 @@
 
 # 🏡 Dwello Landing Page
 
-A modern, responsive **real estate landing page** built using **HTML5**, **TailwindCSS**, and **Swiper.js**, featuring **multi-language support**, **interactive testimonials**, and **light/dark themes**.
+A modern, responsive **real estate landing page** built using **HTML5**, **TailwindCSS**, and **Swiper.js**, featuring **multi-language support**, **interactive testimonials**
 
 ---
 
