@@ -7,73 +7,7 @@
   <title>Dwello Landing Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <style>
-    .sign-up-btn {
-      background-color: #2B1B12;
-      color: #fff;
-      transition: all 0.3s ease;
-    }
-
-    .sign-up-btn:hover {
-      background-color: #3a271d;
-    }
-
-    .search-box {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    }
-
-    * {
-      outline: 1px solid rgba(255, 0, 0, 0.1);
-    }
-    .nav-link li{
-  font-size: 16px;
-    }
-    .nav-link li:hover{
-      text-decoration: underline #2B1B12;
-      color: #715444FF;
-    }
-
-/* Restore Swiper’s default layout */
-.swiper-wrapper {
-  display: flex !important;
-  transition-timing-function: ease !important;
-}
-
-.swiper {
-  padding-bottom: 64px;
-}
-/*  Swiper Navigation Buttons */
-.custom-nav-btn {
-  background-color: #2B1B12; 
-  color: #DDC7BB; 
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: static; 
-}
-
-.custom-nav-btn::after {
-  font-size: 18px;
-  font-weight: bold;
-  color: #DDC7BB;
-}
-
-.custom-nav-btn:hover {
-  background-color: #3a271d; 
-}
-
-.flex.justify-center .custom-nav-btn {
-  margin: 0 6px;
-}
-
-
-
-  </style>
+  <link rel="stylesheet" href="css/style.css" >
 </head>
 
 <body class=" text-[#2B1B12]">
@@ -431,7 +365,7 @@
 <section class="py-12 bg-[#FEF7F2]">
   <div class="max-w-7xl mx-auto px-6 text-center">
     <!-- Heading -->
-    <h2 class="text-3xl md:text-5xl font-bold mb-10 leading-snug max-w-sm mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 leading-snug max-w-sm mx-auto">
       What People Say<br>About Dwello
     </h2>
 
@@ -661,40 +595,6 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
- var swiper = new Swiper(".multiple-slide-carousel", {
-    loop: true,
-   
-    spaceBetween: 20, 
-    navigation: {
-      nextEl: ".multiple-slide-carousel .swiper-button-next",
-      prevEl: ".multiple-slide-carousel .swiper-button-prev",
-    },
-    breakpoints: {
-      1280: { slidesPerView: 3, spaceBetween: 20 },
-      1024: { slidesPerView: 2, spaceBetween: 20 },
-      768: { slidesPerView: 1, spaceBetween: 10 }
-    }
-  });
-
-  // Mobile menu toggle
-   const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-
-   
-    btn.addEventListener('click', (e) => {
-      menu.classList.toggle('hidden');
-      e.stopPropagation();
-    });
-
-
-    document.addEventListener('click', (e) => {
-      if (!menu.contains(e.target) && !btn.contains(e.target)) {
-        menu.classList.add('hidden');
-      }
-    });
-</script>
-
+<script src="script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,65 @@
+/* * {
+    outline: 1px solid rgba(255, 0, 0, 0.1);
+} */
+
+.sign-up-btn {
+      background-color: #2B1B12;
+      color: #fff;
+      transition: all 0.3s ease;
+  }
+
+  .sign-up-btn:hover {
+      background-color: #3a271d;
+  }
+
+  .search-box {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-link li {
+      font-size: 16px;
+  }
+
+  .nav-link li:hover {
+      text-decoration: underline #2B1B12;
+      color: #715444FF;
+  }
+
+  /* Restore Swiper’s default layout */
+  .swiper-wrapper {
+      display: flex !important;
+      transition-timing-function: ease !important;
+  }
+
+  .swiper {
+      padding-bottom: 64px;
+  }
+
+  /*  Swiper Navigation Buttons */
+  .custom-nav-btn {
+      background-color: #2B1B12;
+      color: #DDC7BB;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: static;
+  }
+
+  .custom-nav-btn::after {
+      font-size: 18px;
+      font-weight: bold;
+      color: #DDC7BB;
+  }
+
+  .custom-nav-btn:hover {
+      background-color: #3a271d;
+  }
+
+  .flex.justify-center .custom-nav-btn {
+      margin: 0 6px;
+  }
