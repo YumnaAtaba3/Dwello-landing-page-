@@ -1,6 +1,3 @@
-Absolutely! I can create a **README.md** for your Dwello Landing Page, modeled after the style of your Travel Landing Page README you shared. Here's a comprehensive version for your project:
-
----
 
 # 🏡 Dwello Landing Page
 
@@ -12,10 +9,10 @@ A modern, responsive **real estate landing page** built using **HTML5**, **Tailw
 
 * 🏠 **Beautiful Real Estate Design** — Fully responsive layout optimized for all devices.
 * 🌐 **Multi-Language Support** — English & Arabic translations using `translations.json`.
-* 🌓 **Light / Dark Theme Toggle** — Theme saved in `localStorage`.
+
 * 💬 **Interactive Testimonials** — Horizontal/vertical Swiper slider with autoplay and navigation.
 * 🧭 **TailwindCSS Components** — Responsive header, mobile menu, buttons, and cards.
-* 📱 **Search & Subscribe Section** — Interactive search bar and newsletter subscription.
+
 * 🧩 **Structured Components** — Organized sections: Header, Hero, Dream Home, Why Choose Us, Popular Residences, Testimonials, Contact, Footer.
 
 ---
@@ -76,20 +73,7 @@ new Swiper(".multiple-slide-carousel", {
 });
 ```
 
----
 
-### 🌗 3. Theme Toggle (Optional)
-
-You can implement a theme toggle using `data-theme` on `<html>` and TailwindCSS classes. Example:
-
-```css
-:root[data-theme="dark"] {
-  --bg-color: #121212;
-  --text-color: #f8f9fa;
-}
-```
-
----
 
 ## 🧩 Setup & Usage
 
