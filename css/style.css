@@ -63,3 +63,67 @@
   .flex.justify-center .custom-nav-btn {
       margin: 0 6px;
   }
+
+
+
+  [dir="rtl"] .email-input {
+      padding-right: 12px;
+      padding-left: 40px;
+
+  }
+
+  [dir="rtl"] .email-icon {
+      left: auto;
+      right: 12px;
+     
+  }
+
+
+  [dir="ltr"] .email-input {
+      padding-left: 40px;
+      padding-right: 12px;
+  }
+
+  [dir="ltr"] .email-icon {
+      right: auto;
+      left: 12px;
+  }
+
+  [dir="ltr"] .select-icon {
+      background-position: right 0.75rem center;
+      padding-left: 1rem;
+      padding-right: 2.5rem;
+  }
+
+
+  [dir="rtl"] .select-icon {
+      background-position: left 0.75rem center;
+      padding-right: 1rem;
+      padding-left: 2.5rem;
+  }
+
+
+  /* Automatically flip text alignment based on page direction */
+  html[dir="ltr"] p[data-i18n] {
+      text-align: left;
+  }
+
+  html[dir="rtl"] p[data-i18n] {
+      text-align: right;
+  }
+
+
+
+  html[dir="rtl"] p,
+
+  html[dir="rtl"] h3 {
+      direction: rtl;
+      text-align: right;
+  }
+
+  html[dir="ltr"] p,
+
+  html[dir="ltr"] h3 {
+      direction: ltr;
+      text-align: left;
+  }

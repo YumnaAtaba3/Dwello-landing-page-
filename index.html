@@ -19,45 +19,57 @@
     </div>
 
     <!-- Desktop Navigation Links -->
-    <ul class="nav-link font-bold hidden md:flex space-x-8 text-sm flex-shrink-0">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Service</a></li>
-      <li><a href="#">Agents</a></li>
-      <li><a href="#">Contact</a></li>
+    <ul class="nav-link font-bold hidden md:flex space-x-8 rtl:space-x-reverse text-sm flex-shrink-0">
+      <li><a href="#" data-i18n="navHome">Home</a></li>
+      <li><a href="#" data-i18n="navService">Service</a></li>
+      <li><a href="#" data-i18n="navAgents">Agents</a></li>
+      <li><a href="#" data-i18n="navContact">Contact</a></li>
     </ul>
 
     <!-- Desktop Icons and Sign Up -->
     <div class="hidden md:flex items-center space-x-4 flex-shrink-0">
-      <button aria-label="Search" class="p-2">
+      <!-- Language Switcher -->
+      <div class="flex items-center space-x-2 md:space-x-4">
+      <button class="lang-toggle p-2 font-bold" data-i18n="lang">AR</button>
+      </div>
+
+      <button aria-label="Search" class="p-2" >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
           class="w-5 h-5">
           <path stroke-linecap="round" stroke-linejoin="round"
             d="m21 21-4.35-4.35m0 0A7.5 7.5 0 1 0 6.65 6.65a7.5 7.5 0 0 0 10.6 10.6Z" />
         </svg>
       </button>
-        <button aria-label="Profile" class="p-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-            class="w-5 h-5">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M15.75 7.5a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 20.25a8.25 8.25 0 0 1 15 0" />
-          </svg>
-        </button>
-      <button
-        class="sign-up-btn rounded-lg text-sm px-5 py-2.5 font-medium hover:bg-[#3c2a1f] hover:scale-105 hover:shadow-lg">
-        Sign up
-      </button>
-    </div>
 
-    <!-- Mobile Icons: Hamburger + Profile -->
-    <div class="flex items-center md:hidden space-x-2">
-      <button aria-label="Profile" class="p-2">
+      <button aria-label="Profile" class="p-2" ">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
           class="w-5 h-5">
           <path stroke-linecap="round" stroke-linejoin="round"
             d="M15.75 7.5a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 20.25a8.25 8.25 0 0 1 15 0" />
         </svg>
       </button>
-      <button id="mobile-menu-btn" class="p-2">
+
+      <button
+        class="sign-up-btn rounded-lg text-sm px-5 py-2.5 font-medium hover:bg-[#3c2a1f] hover:scale-105 hover:shadow-lg"
+        data-i18n="signup">
+        Sign up
+      </button>
+    </div>
+
+    <!-- Mobile Icons -->
+    <div class="flex items-center md:hidden space-x-2 rtl:space-x-reverse">
+      <div class="flex items-center space-x-2 md:space-x-4">
+            <button class="lang-toggle p-2 font-bold" data-i18n="lang">AR</button>
+
+      </div>
+      <button aria-label="Profile" class="p-2" >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.75 7.5a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 20.25a8.25 8.25 0 0 1 15 0" />
+        </svg>
+      </button>
+      <button id="mobile-menu-btn" class="p-2" >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
           class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -68,36 +80,39 @@
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-[#FEF7F2] px-4 pb-4">
-    <ul class="flex flex-col space-y-4 font-bold text-sm">
-      <li><a href="#" class="block">Home</a></li>
-      <li><a href="#" class="block">Service</a></li>
-      <li><a href="#" class="block">Agents</a></li>
-      <li><a href="#" class="block">Contact</a></li>
+    <ul class="flex flex-col space-y-4 rtl:space-y-reverse font-bold text-sm">
+      <li><a href="#" class="block" data-i18n="navHome">Home</a></li>
+      <li><a href="#" class="block" data-i18n="navService">Service</a></li>
+      <li><a href="#" class="block" data-i18n="navAgents">Agents</a></li>
+      <li><a href="#" class="block" data-i18n="navContact">Contact</a></li>
     </ul>
     <div class="mt-4 flex flex-col space-y-3">
       <button
-        class="sign-up-btn rounded-lg text-sm px-5 py-2.5 font-medium hover:bg-[#3c2a1f] hover:scale-105 hover:shadow-lg w-full">
+        class="sign-up-btn rounded-lg text-sm px-5 py-2.5 font-medium hover:bg-[#3c2a1f] hover:scale-105 hover:shadow-lg w-full"
+        data-i18n="signup">
         Sign up
       </button>
-      <button aria-label="Search" class="p-2 w-full border rounded-lg hover:bg-[#e0d3c9]">Search</button>
+      <button aria-label="Search" class="p-2 w-full border rounded-lg hover:bg-[#e0d3c9]" data-i18n="search">
+        Search
+      </button>
     </div>
   </div>
 </header>
-
-
 <!-- Hero Section -->
-<section class="bg-[#FEF7F2] flex flex-col justify-center items-center relative   min-h-[calc(100vh-64px)]"
-      > 
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full h-full px-4 md:px-6">
+<section class="bg-[#FEF7F2] flex flex-col justify-center items-center relative min-h-[calc(100vh-64px)]">
+  <div
+    class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full h-full px-4 md:px-6 mt-36 md:mt-0">
     <!-- Left Text -->
     <div class="text-center md:text-left md:w-5/12 flex flex-col justify-center">
-      <h1 class="text-5xl md:text-7xl lg:text-7xl font-bold mb-14 leading-tight">
+      <h1 class="text-5xl md:text-7xl lg:text-7xl font-bold mb-14 leading-tight text-left rtl:text-right"
+        data-i18n="heroTitle">
         Find Your Dream Home
       </h1>
-      <p class="text-lg text-[#2B1B12]/80 mb-8 font-bold max-w-md">
+
+      <p class="text-lg text-[#2B1B12]/80 mb-8 font-bold max-w-md" data-i18n="heroDesc">
         Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision.
       </p>
-      <button class="sign-up-btn px-14 py-3 rounded-lg text-lg font-semibold w-fit mx-auto md:mx-0">
+      <button class="sign-up-btn px-14 py-3 rounded-lg text-lg font-semibold w-fit mx-auto md:mx-0" data-i18n="heroBtn">
         Sign up
       </button>
     </div>
@@ -105,43 +120,45 @@
     <!-- Right Image -->
     <div class="md:w-7/12 flex justify-center items-center">
       <img src="assets/hero/hero.png" alt="Luxury Home"
-           class="rounded-2xl w-full max-w-2xl h-auto object-cover scale-110 md:scale-125 lg:scale-149 transition-transform duration-500" />
+        class="rounded-2xl w-full max-w-2xl h-auto object-cover scale-110 md:scale-125 lg:scale-149 transition-transform duration-500" />
     </div>
   </div>
 </section>
 
 <!-- Floating Search Bar -->
 <div class="relative z-30 w-full max-w-7xl mx-auto">
-  <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full md:w-[70%] sm:w-[50%] ">
+  <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full md:w-[70%] sm:w-[50%]">
     <div class="search-box bg-[#DDC7BB] p-7 rounded-2xl shadow-lg">
       <div class="flex flex-col md:flex-row items-center gap-4">
-        <select class="appearance-none border border-gray-200 rounded-lg p-3 w-full md:w-auto flex-1 text-gray-600
-                     bg-[url('assets/search-bar/location.svg')] bg-no-repeat bg-[right_0.75rem_center]">
-          <option>Location</option>
+
+        <select
+          class="select-icon appearance-none border border-gray-200 rounded-lg p-3 w-full md:w-auto flex-1 text-gray-600 bg-[url('assets/search-bar/location.svg')] bg-no-repeat bg-[right_0.75rem_center]">
+          <option data-i18n="searchLocation">Location</option>
           <option>San Francisco</option>
           <option>Los Angeles</option>
           <option>Miami</option>
         </select>
 
-        <select class="appearance-none border border-gray-200 rounded-lg p-3 w-full md:w-auto flex-1 text-gray-600
-                     bg-[url('assets/search-bar/home.svg')] bg-no-repeat bg-[right_0.75rem_center]">
-          <option>Type</option>
+        <select
+          class="select-icon appearance-none border border-gray-200 rounded-lg p-3 w-full md:w-auto flex-1 text-gray-600 bg-[url('assets/search-bar/home.svg')] bg-no-repeat bg-[right_0.75rem_center]">
+          <option data-i18n="searchType">Type</option>
           <option>Apartment</option>
           <option>Villa</option>
           <option>House</option>
         </select>
 
-        <select class="appearance-none border border-gray-200 rounded-lg p-3 w-full md:w-auto flex-1 text-gray-600
-                     bg-[url('assets/search-bar/price.svg')] bg-no-repeat bg-[right_0.75rem_center]">
-          <option>Price Range</option>
+        <select
+          class="select-icon appearance-none border border-gray-200 rounded-lg p-3 w-full md:w-auto flex-1 text-gray-600 bg-[url('assets/search-bar/price.svg')] bg-no-repeat bg-[right_0.75rem_center]">
+          <option data-i18n="searchPrice">Price Range</option>
           <option>$100k - $500k</option>
           <option>$500k - $1M</option>
           <option>$1M+</option>
         </select>
 
-        <button class="sign-up-btn w-full md:w-auto px-8 py-3 rounded-lg font-medium">
+        <button class="sign-up-btn w-full md:w-auto px-8 py-3 rounded-lg font-medium" data-i18n="searchBtn">
           Sign up
         </button>
+
       </div>
     </div>
   </div>
@@ -149,8 +166,9 @@
 
 
 <!-- Dream Home Section -->
-<section class="bg-white py-24  relative z-10 mt-20 md:mt-0">
+<section class="bg-white py-24 relative z-10 mt-20 md:mt-0">
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-12">
+
     <!-- Left Image -->
     <div class="md:w-1/2">
       <img src="assets/dream/Mask group.png" alt="Modern Dream Home" class="shadow-xl w-full h-auto object-cover">
@@ -158,26 +176,30 @@
 
     <!-- Right Content -->
     <div class="md:w-1/2 space-y-6">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug" data-i18n="dreamHomeTitle">
         We Help You To Find Your Dream Home
       </h2>
-      <p class="text-lg text-[#4F3527] max-w-lg font-[700]">
+
+      <p class="text-lg text-[#4F3527] max-w-lg font-[700]" data-i18n="dreamHomeDesc">
         From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey,
         ensuring your dream home becomes a reality.
       </p>
+
       <!-- Stats -->
       <div class="flex flex-wrap gap-10 mt-8">
         <div>
-          <h3 class="text-3xl md:text-4xl font-bold">8K+</h3>
-          <p class="text-[#2B1B12]/70 text-sm font-medium">Houses Available</p>
+          <h3 class="text-3xl md:text-4xl font-bold" data-i18n="statHousesAvailable">8K+</h3>
+          <p class="text-[#2B1B12]/70 text-sm font-medium" data-i18n="statHousesAvailableDesc">Houses Available</p>
         </div>
+
         <div>
-          <h3 class="text-3xl md:text-4xl font-bold">6K+</h3>
-          <p class="text-[#2B1B12]/70 text-sm font-medium">Houses Sold</p>
+          <h3 class="text-3xl md:text-4xl font-bold" data-i18n="statHousesSold">6K+</h3>
+          <p class="text-[#2B1B12]/70 text-sm font-medium" data-i18n="statHousesSoldDesc">Houses Sold</p>
         </div>
+
         <div>
-          <h3 class="text-3xl md:text-4xl font-bold">2K+</h3>
-          <p class="text-[#2B1B12]/70 text-sm font-medium">Trusted Agents</p>
+          <h3 class="text-3xl md:text-4xl font-bold" data-i18n="statAgents">2K+</h3>
+          <p class="text-[#2B1B12]/70 text-sm font-medium" data-i18n="statAgentsDesc">Trusted Agents</p>
         </div>
       </div>
     </div>
@@ -185,187 +207,222 @@
 </section>
 
 
-    <!-- Why Choose Us Section -->
-    <section class="py-12 bg-white">
-      <div class="max-w-7xl mx-auto px-6 text-center">
-        <!-- Heading -->
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Us</h2>
-        <p class="text-[#4F3527] max-w-2xl font-bold mx-auto mb-12">
-          Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service
-        </p>
-
+  <!-- Why Choose Us Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <!-- Heading -->
+      <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="whyChooseTitle">
+        Why Choose Us
+      </h2>
+      <p class="text-[#4F3527] max-w-2xl font-bold mx-auto mb-12" data-i18n="whyChooseDesc">
+        Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service
+      </p>
+  
       <!-- Cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      
+  
         <!-- Card 1 -->
         <div class="bg-[#DDC7BB] rounded-2xl shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
           <div class="flex flex-col items-start text-left space-y-4">
             <div class="bg-[#FBF5F1] p-3 rounded-lg inline-flex">
               <img src="assets/choose-us/map.png" alt="Map" class="w-12 h-12 object-contain">
             </div>
-            <h3 class="text-xl font-semibold">Expert Guidance</h3>
-            <p class="text-[#2B1B12]/70 text-sm">
+            <h3 class="text-xl font-semibold" data-i18n="chooseCard1Title">Expert Guidance</h3>
+            <p class="text-[#2B1B12]/70 text-sm" data-i18n="chooseCard1Desc">
               Benefit from our team's seasoned expertise for a smooth buying experience.
             </p>
           </div>
         </div>
-      
+  
         <!-- Card 2 -->
         <div class="bg-[#DDC7BB] rounded-2xl shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
           <div class="flex flex-col items-start text-left space-y-4">
             <div class="bg-[#FBF5F1] p-3 rounded-lg inline-flex">
               <img src="assets/choose-us/person.png" alt="Person" class="w-12 h-12 object-contain">
             </div>
-            <h3 class="text-xl font-semibold">Personalized Service</h3>
-            <p class="text-[#2B1B12]/70 text-sm">
+            <h3 class="text-xl font-semibold" data-i18n="chooseCard2Title">Personalized Service</h3>
+            <p class="text-[#2B1B12]/70 text-sm" data-i18n="chooseCard2Desc">
               Our services adapt to your unique needs, making your journey stress-free.
             </p>
           </div>
         </div>
-      
+  
         <!-- Card 3 -->
         <div class="bg-[#DDC7BB] rounded-2xl shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
           <div class="flex flex-col items-start text-left space-y-4">
             <div class="bg-[#FBF5F1] p-3 rounded-lg inline-flex">
               <img src="assets/choose-us/notes.png" alt="Notes" class="w-12 h-12 object-contain">
             </div>
-            <h3 class="text-xl font-semibold">Transparent Process</h3>
-            <p class="text-[#2B1B12]/70 text-sm">
+            <h3 class="text-xl font-semibold" data-i18n="chooseCard3Title">Transparent Process</h3>
+            <p class="text-[#2B1B12]/70 text-sm" data-i18n="chooseCard3Desc">
               Stay informed with our clear and honest approach to buying your home.
             </p>
           </div>
         </div>
-      
+  
         <!-- Card 4 -->
         <div class="bg-[#DDC7BB] rounded-2xl shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
           <div class="flex flex-col items-start text-left space-y-4">
             <div class="bg-[#FBF5F1] p-3 rounded-lg inline-flex">
               <img src="assets/choose-us/hands.png" alt="Hands" class="w-12 h-12 object-contain">
             </div>
-            <h3 class="text-xl font-semibold">Exceptional Support</h3>
-            <p class="text-[#2B1B12]/70 text-sm">
+            <h3 class="text-xl font-semibold" data-i18n="chooseCard4Title">Exceptional Support</h3>
+            <p class="text-[#2B1B12]/70 text-sm" data-i18n="chooseCard4Desc">
               Providing peace of mind with our responsive and attentive customer service.
             </p>
           </div>
         </div>
+  
+      </div>
+    </div>
+  </section>
+    <!-- Our Popular Residences Section -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <!-- Heading -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="popularResidencesTitle">
+          Our Popular Residences
+        </h2>
+        <p class="text-[#2B1B12] max-w-2xl mx-auto mb-16 font-bold" data-i18n="popularResidencesDesc">
+          Explore our handpicked selection of elegant and modern properties that match your lifestyle and dreams.
+        </p>
+    
+        <!-- Property Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <!-- Card 1 -->
+          <div class="bg-[#DDC7BB] rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-[330px]">
+            <!-- image -->
+            <div class="overflow-hidden rounded-t-xl">
+              <img src="assets/Residences/house1.png" alt="house image 1"
+                class="w-full h-[200px] object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+    
+            <!-- content -->
+            <div class="p-5 text-left">
+              <div class="flex flex-row items-center gap-2">
+                <img src="assets/Residences/location (1).svg" alt="location icon" class="object-contain w-6" />
+                <p class="mb-1 text-lg font-bold" data-i18n="residence1Location">
+                  San Francisco, California
+                </p>
+              </div>
+    
+              <div class="flex flex-row justify-between gap-2 pr-12 py-4">
+                <div class="flex flex-row items-center gap-1">
+                  <img class="bg-white" src="assets/Residences/rooms.svg" alt="room icon" />
+                  <p class="text-[#2B1B12]" data-i18n="residence1Rooms">
+                    4 Rooms
+                  </p>
+                </div>
+                <div class="flex flex-row items-center gap-1">
+                  <img class="bg-white" src="assets/Residences/size.svg" alt="size icon" />
+                  <p class="text-[#2B1B12]" data-i18n="residence1Size">
+                    3,500 sq ft
+                  </p>
+                </div>
+              </div>
+    
+              <div class="flex flex-row justify-between items-center">
+                <button class="sign-up-btn px-5 py-2 rounded-lg text-sm font-medium" data-i18n="heroBtn">
+                  Sign up
+                </button>
+                <p class="font-bold" data-i18n="residence1Price">
+                  $850,000
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="bg-[#DDC7BB] rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-[330px]">
+            <div class="overflow-hidden rounded-t-xl">
+              <img src="assets/Residences/house2.png" alt="house image 2"
+                class="w-full h-[200px] object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+    
+            <div class="p-5 text-left">
+              <div class="flex flex-row items-center gap-2">
+                <img src="assets/Residences/location (1).svg" alt="location icon" class="object-contain w-6" />
+                <p class="mb-1 text-lg font-bold" data-i18n="residence2Location">
+                  Beverly Hills, California
+                </p>
+              </div>
+    
+              <div class="flex flex-row justify-between gap-2 pr-12 py-4">
+                <div class="flex flex-row items-center gap-1">
+                  <img class="bg-white" src="assets/Residences/rooms.svg" alt="room icon" />
+                  <p class="text-[#2B1B12]" data-i18n="residence2Rooms">
+                    3 Rooms
+                  </p>
+                </div>
+                <div class="flex flex-row items-center gap-1">
+                  <img class="bg-white" src="assets/Residences/size.svg" alt="size icon" />
+                  <p class="text-[#2B1B12]" data-i18n="residence2Size">
+                    1,500 sq ft
+                  </p>
+                </div>
+              </div>
+    
+              <div class="flex flex-row justify-between items-center">
+                <button class="sign-up-btn px-5 py-2 rounded-lg text-sm font-medium" data-i18n="heroBtn">
+                  Sign up
+                </button>
+                <p class="font-bold" data-i18n="residence2Price">
+                  $3,700,000
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="bg-[#DDC7BB] rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-[330px]">
+            <div class="overflow-hidden rounded-t-xl">
+              <img src="assets/Residences/house3.png" alt="house image 3"
+                class="w-full h-[200px] object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+    
+            <div class="p-5 text-left">
+              <div class="flex flex-row items-center gap-2">
+                <img src="assets/Residences/location (1).svg" alt="location icon" class="object-contain w-6" />
+                <p class="mb-1 text-lg font-bold" data-i18n="residence3Location">
+                  Palo Alto, California
+                </p>
+              </div>
+    
+              <div class="flex flex-row justify-between gap-2 pr-12 py-4">
+                <div class="flex flex-row items-center gap-1">
+                  <img class="bg-white" src="assets/Residences/rooms.svg" alt="room icon" />
+                  <p class="text-[#2B1B12]" data-i18n="residence3Rooms">
+                    6 Rooms
+                  </p>
+                </div>
+                <div class="flex flex-row items-center gap-1">
+                  <img class="bg-white" src="assets/Residences/size.svg" alt="size icon" />
+                  <p class="text-[#2B1B12]" data-i18n="residence3Size">
+                    4,000 sq ft
+                  </p>
+                </div>
+              </div>
+    
+              <div class="flex flex-row justify-between items-center">
+                <button class="sign-up-btn px-5 py-2 rounded-lg text-sm font-medium" data-i18n="heroBtn">
+                  Sign up
+                </button>
+                <p class="font-bold" data-i18n="residence3Price">
+                  $2,500,000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-      <!-- Our Popular Residences Section -->
-      
-      <section class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-      
-          <!-- Heading -->
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Popular Residences</h2>
-          <p class="text-[#2B1B12] max-w-2xl mx-auto mb-16 font-bold ">
-            Explore our handpicked selection of elegant and modern properties that match your lifestyle and dreams.
-          </p>
-      
-          <!-- Property Cards -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-      
-            <!-- Card 1 -->
-      <div class="bg-[#DDC7BB] rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-[330px]">
-        <!-- image -->
-        <div class="overflow-hidden rounded-t-xl">
-          <img src="assets//Residences/house1.png" alt="house image 1"
-            class="w-full h-[200px] object-cover hover:scale-105 transition-transform duration-500">
-        </div>
-        <!-- row 1 -->
-        <div class="p-5 text-left">
-          <div class="flex flex-row"><img src="assets/Residences/location (1).svg" alt="location icon "
-              class=" object-contain w-6">
-            <p class=" mb-1 text-lg font-bold">San Francisco, California</p>
-          </div>
-          <!-- row 2 -->
-          <div class="flex flex-row justify-between gap-2 pr-24 py-4 ">
-            <div class="flex flex-row">
-              <img  class="bg-white" src="assets/Residences/rooms.svg" alt="room icon">
-              <p class=" text-[#2B1B12]">4 Rooms</p>
-            </div>
-            <div class="flex flex-row ">
-              <img  class="bg-white" src="assets/Residences/size.svg" alt="size icon ">
-              <p class=" text-[#2B1B12]">3,500 sq ft</p>
-            </div>
-          </div>
-          <!-- row 3 -->
-          <div class="flex flex-row justify-between">
-            <button class="sign-up-btn px-5 py-2 rounded-lg text-sm font-medium">
-              sign up
-            </button>
-            <p class="font-bold">$850,000</p>
-          </div>
-        </div>
-      </div>
-      
-            <!-- Card 2 -->
-        <div class="bg-[#DDC7BB] rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-[330px]">
-          <div class="overflow-hidden rounded-t-xl">
-            <img src="assets/Residences/house2.png" alt="house image 2"
-              class="w-full h-[200px] object-cover hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="p-5 text-left">
-            <div class="flex flex-row"><img src="assets/Residences/location (1).svg" alt="location icon "
-                class=" object-contain w-6">
-              <p class=" mb-1 text-lg font-bold">Beverly Hills, California</p>
-            </div>
-            <div class="flex flex-row justify-between gap-2 pr-24 py-4 ">
-              <div class="flex flex-row">
-                <img  class="bg-white" src="assets/Residences/rooms.svg" alt="room icon">
-                <p class=" text-[#2B1B12]">3 Rooms</p>
-              </div>
-              <div class="flex flex-row ">
-                <img  class="bg-white" src="assets/Residences/size.svg" alt="size icon ">
-                <p class=" text-[#2B1B12]">1,500 sq ft</p>
-              </div>
-            </div>
-          <div class="flex flex-row justify-between">
-            <button class="sign-up-btn px-5 py-2 rounded-lg text-sm font-medium">
-              sign up
-            </button>
-            <p class="font-bold">$3,700,000</p>
-          </div>
-          </div>
-        </div>
-      
-            <!-- Card 3 -->
-            <div class="bg-[#DDC7BB] rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-[330px]">
-              <div class="overflow-hidden rounded-t-xl">
-                <img src="assets/Residences/house3.png" alt="house image 3"
-                  class="w-full h-[200px] object-cover hover:scale-105 transition-transform duration-500">
-              </div>
-              <div class="p-5 text-left">
-               <div class="flex flex-row"><img src="assets/Residences/location (1).svg" alt="location icon "
-                class=" object-contain w-6">
-              <p class=" mb-1 text-lg font-bold">Palo Alto, California</p></div>
-               <div class="flex flex-row justify-between gap-2 pr-24 py-4 ">
-                <div class="flex flex-row">
-                  <img  class="bg-white" src="assets/Residences/rooms.svg" alt="room icon">
-                  <p class=" text-[#2B1B12]"> 6 Rooms</p>
-                </div>
-                <div class="flex flex-row ">
-                  <img  class="bg-white" src="assets/Residences/size.svg" alt="size icon">
-                  <p class=" text-[#2B1B12]">4,000 sq ft</p>
-                </div>
-               </div>
-               <div class="flex flex-row justify-between" >
-                <button class="sign-up-btn px-5 py-2 rounded-lg text-sm font-medium">
-                sign up
-              </button>
-               <p class="font-bold">$2,500,000</p>
-            </div>
-              </div>
-            </div>
-      
-          </div>
-        </div>
-      </section>
+
 
 <!-- What People Say About Us Section -->
 <section class="py-12 bg-[#FEF7F2]">
   <div class="max-w-7xl mx-auto px-6 text-center">
     <!-- Heading -->
-    <h2 class="text-3xl md:text-4xl font-bold mb-10 leading-snug max-w-sm mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 leading-snug max-w-sm mx-auto" data-i18n="testimonialsTitle">
       What People Say<br>About Dwello
     </h2>
 
@@ -377,23 +434,22 @@
           <!-- Testimonial 1 -->
           <div class="swiper-slide">
             <div
-              class="bg-[#DDC7BB] rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 w-[330px] overflow-hidden mx-auto">
-              <!-- Image -->
+              class="bg-[#DDC7BB] rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 w-[330px] overflow-hidden mx-auto flex flex-col h-full">
               <img src="assets/about/room1.png" alt="room image 1" class="w-full h-[200px] object-cover">
-              <!-- Inner content -->
-              <div class="p-4">
-                <div class="flex items-center mb-4">
-                  <img src="assets/user/girl1.jpg" alt="Client" class="w-14 h-14 rounded-full object-cover mr-4">
-                  <div class="text-left">
-                    <h3 class="font-semibold text-lg">Sarah Nguyen</h3>
-                    <p class="text-sm text-[#2B1B12]/70">San Francisco</p>
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-x-4 rtl:gap-x-reverse mb-4">
+                  <img src="assets/user/girl1.jpg" alt="Client" class="w-14 h-14 rounded-full object-cover">
+                  <div class="text-left rtl:text-right">
+                    <h3 class="font-semibold text-lg" data-i18n="testimonial1Name">Sarah Nguyen</h3>
+                    <p class="text-sm text-[#2B1B12]/70" data-i18n="testimonial1Location">San Francisco</p>
                   </div>
-                  <div class="ml-auto flex items-center bg-white rounded-md px-2 py-1">
+                  <div class="ml-auto flex items-center bg-white rounded-md px-2 py-1 rtl:ml-0 rtl:mr-auto">
                     <img class="w-4 h-4 mr-1" src="assets/about/Star 1.svg" alt="Star">
-                    <p class="text-sm font-medium">5.0</p>
+                    <p class="text-sm font-medium" data-i18n="testimonial1Rating">5.0</p>
                   </div>
                 </div>
-                <p class="text-[#2B1B12] font-semibold text-sm leading-relaxed text-left">
+                <p class="text-[#2B1B12] font-semibold text-sm leading-relaxed text-left rtl:text-right flex-1"
+                  data-i18n="testimonial1Text">
                   Dwello truly cares about their clients. They listened to my needs and helped me find the perfect home
                   in the Bay Area.
                 </p>
@@ -404,21 +460,22 @@
           <!-- Testimonial 2 -->
           <div class="swiper-slide">
             <div
-              class="bg-[#DDC7BB] rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 w-[330px] overflow-hidden mx-auto">
+              class="bg-[#DDC7BB] rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 w-[330px] overflow-hidden mx-auto flex flex-col h-full">
               <img src="assets/about/room2.png" alt="room image 2" class="w-full h-[200px] object-cover">
-              <div class="p-4">
-                <div class="flex items-center mb-4">
-                  <img src="assets/user/boy.jpg" alt="Client" class="w-14 h-14 rounded-full object-cover mr-4">
-                  <div class="text-left">
-                    <h3 class="font-semibold text-lg">Michael Rodriguez</h3>
-                    <p class="text-sm text-[#2B1B12]/70">San Diego</p>
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-x-4 rtl:gap-x-reverse mb-4">
+                  <img src="assets/user/boy.jpg" alt="Client" class="w-14 h-14 rounded-full object-cover">
+                  <div class="text-left rtl:text-right">
+                    <h3 class="font-semibold text-lg" data-i18n="testimonial2Name">Michael Rodriguez</h3>
+                    <p class="text-sm text-[#2B1B12]/70" data-i18n="testimonial2Location">San Diego</p>
                   </div>
-                  <div class="ml-auto flex items-center bg-white rounded-md px-2 py-1">
+                  <div class="ml-auto flex items-center bg-white rounded-md px-2 py-1 rtl:ml-0 rtl:mr-auto">
                     <img class="w-4 h-4 mr-1" src="assets/about/Star 1.svg" alt="Star">
-                    <p class="text-sm font-medium">4.5</p>
+                    <p class="text-sm font-medium" data-i18n="testimonial2Rating">4.5</p>
                   </div>
                 </div>
-                <p class="text-[#2B1B12] font-semibold text-sm leading-relaxed text-left">
+                <p class="text-[#2B1B12] font-semibold text-sm leading-relaxed text-left rtl:text-right flex-1"
+                  data-i18n="testimonial2Text">
                   I had a fantastic experience with Dwello. Their expertise and personalized service exceeded my
                   expectations.
                 </p>
@@ -429,172 +486,158 @@
           <!-- Testimonial 3 -->
           <div class="swiper-slide">
             <div
-              class="bg-[#DDC7BB] rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 w-[330px] overflow-hidden mx-auto">
+              class="bg-[#DDC7BB] rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 w-[330px] overflow-hidden mx-auto flex flex-col h-full">
               <img src="assets/about/room3.png" alt="room image 3" class="w-full h-[200px] object-cover">
-              <div class="p-4">
-                <div class="flex items-center mb-4">
-                  <img src="assets/user/girl2.jpg" alt="Client" class="w-14 h-14 rounded-full object-cover mr-4">
-                  <div class="text-left">
-                    <h3 class="font-semibold text-lg">Emily Johnson</h3>
-                    <p class="text-sm text-[#2B1B12]/70">Los Angeles</p>
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-x-4 rtl:gap-x-reverse mb-4">
+                  <img src="assets/user/girl2.jpg" alt="Client" class="w-14 h-14 rounded-full object-cover">
+                  <div class="text-left rtl:text-right">
+                    <h3 class="font-semibold text-lg" data-i18n="testimonial3Name">Emily Johnson</h3>
+                    <p class="text-sm text-[#2B1B12]/70" data-i18n="testimonial3Location">Los Angeles</p>
                   </div>
-                  <div class="ml-auto flex items-center bg-white rounded-md px-2 py-1">
+                  <div class="ml-auto flex items-center bg-white rounded-md px-2 py-1 rtl:ml-0 rtl:mr-auto">
                     <img class="w-4 h-4 mr-1" src="assets/about/Star 1.svg" alt="Star">
-                    <p class="text-sm font-medium">5.0</p>
+                    <p class="text-sm font-medium" data-i18n="testimonial3Rating">5.0</p>
                   </div>
                 </div>
-                <p class="text-[#2B1B12] font-semibold text-sm leading-relaxed text-left">
+                <p class="text-[#2B1B12] font-semibold text-sm leading-relaxed text-left rtl:text-right flex-1"
+                  data-i18n="testimonial3Text">
                   Dwello made my dream of owning a home a reality! Their team provided exceptional support every step of
                   the way.
                 </p>
               </div>
             </div>
           </div>
+
           <!-- Testimonial 4 -->
-<div class="swiper-slide">
-  <div
-    class="bg-[#DDC7BB] rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 w-[330px] overflow-hidden mx-auto">
-    <!-- Image -->
-    <img src="assets/about/room1.png" alt="room image 4" class="w-full h-[200px] object-cover">
-    <!-- Inner content -->
-    <div class="p-4">
-      <div class="flex items-center mb-4">
-        <img src="assets/user/girl1.jpg" alt="Client" class="w-14 h-14 rounded-full object-cover mr-4">
-        <div class="text-left">
-          <h3 class="font-semibold text-lg">Sarah Nguyen</h3>
-          <p class="text-sm text-[#2B1B12]/70">San Francisco</p>
-        </div>
-        <div class="ml-auto flex items-center bg-white rounded-md px-2 py-1">
-          <img class="w-4 h-4 mr-1" src="assets/about/Star 1.svg" alt="Star">
-          <p class="text-sm font-medium">5.0</p>
-        </div>
-      </div>
-      <p class="text-[#2B1B12] font-semibold text-sm leading-relaxed text-left">
-        Dwello truly cares about their clients. They listened to my needs and helped me find the perfect home
-        in the Bay Area.
-      </p>
-    </div>
-  </div>
-</div>
+          <div class="swiper-slide">
+            <div
+              class="bg-[#DDC7BB] rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 w-[330px] overflow-hidden mx-auto flex flex-col h-full">
+              <img src="assets/about/room1.png" alt="room image 4" class="w-full h-[200px] object-cover">
+              <div class="p-4 flex flex-col flex-1">
+                <div class="flex items-center gap-x-4 rtl:gap-x-reverse mb-4">
+                  <img src="assets/user/girl1.jpg" alt="Client" class="w-14 h-14 rounded-full object-cover">
+                  <div class="text-left rtl:text-right">
+                    <h3 class="font-semibold text-lg" data-i18n="testimonial4Name">Sarah Nguyen</h3>
+                    <p class="text-sm text-[#2B1B12]/70" data-i18n="testimonial4Location">San Francisco</p>
+                  </div>
+                  <div class="ml-auto flex items-center bg-white rounded-md px-2 py-1 rtl:ml-0 rtl:mr-auto">
+                    <img class="w-4 h-4 mr-1" src="assets/about/Star 1.svg" alt="Star">
+                    <p class="text-sm font-medium" data-i18n="testimonial4Rating">5.0</p>
+                  </div>
+                </div>
+                <p class="text-[#2B1B12] font-semibold text-sm leading-relaxed text-left rtl:text-right flex-1"
+                  data-i18n="testimonial4Text">
+                  Dwello truly cares about their clients. They listened to my needs and helped me find the perfect home
+                  in the Bay Area.
+                </p>
+              </div>
+            </div>
+          </div>
 
         </div>
 
         <!-- Navigation Buttons -->
-      <div class="flex justify-center items-center gap-4 mt-6">
-        <div class="swiper-button-prev custom-nav-btn"></div>
-        <div class="swiper-button-next custom-nav-btn"></div>
-      </div>
+        <div class="flex justify-center items-center gap-4 mt-6">
+          <div class="swiper-button-prev custom-nav-btn"></div>
+          <div class="swiper-button-next custom-nav-btn"></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- contact section -->
-   <section  class="py-12 bg-white">
-<div class="max-w-7xl mx-auto px-6 text-center">
-  <!-- Heading -->
-  <h2 class="text-3xl md:text-4xl font-bold mb-4">Do You Have Any Questions?<br> Get Help From Us</h2>
- <div class="text-[#543E32] flex flex-row justify-center" >
-  <div class="flex flex-row">
-    <img src="assets/contact/icons8-verified-account-96 1.svg" alt="verified icon">
-    <p class="font-bold">Chat live with our support team</p>
-  </div>
-  <div class="flex flex-row pl-24">
-    <img src="assets/contact/icons8-verified-account-96 1.svg" alt="verified icon">
-    <p class="font-bold">Browse our FAQ</p>
-  </div>
- </div>
-<div class="flex flex-col md:flex-row justify-center items-center p-6 gap-4">
-  <div class="relative w-full md:w-auto">
-    <!-- Email Icon -->
-    <img src="assets/contact/email.svg" alt="Email Icon" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5">
 
-    <input type="email" placeholder="Enter your email address..."
-      class="pl-12 pr-4 py-3 w-full md:w-96 h-10 rounded-lg bg-[#DDC7BB] placeholder-[#543E32] text-[#2B1B12] focus:outline-none" />
+<!-- contact section -->
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="contactTitle">Do You Have Any Questions?<br> Get Help
+      From Us</h2>
+
+    <div class="text-[#543E32] flex flex-row justify-center gap-3">
+      <div class="flex flex-row">
+        <img src="assets/contact/icons8-verified-account-96 1.svg" alt="verified icon">
+        <p class="font-bold" data-i18n="contactChat">Chat live with our support team</p>
+      </div>
+      <div class="flex flex-row pl-12">
+        <img src="assets/contact/icons8-verified-account-96 1.svg" alt="verified icon">
+        <p class="font-bold" data-i18n="contactFAQ">Browse our FAQ</p>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-center items-center p-6 gap-4">
+      <div class="relative w-full md:w-auto">
+        <!-- Email Icon -->
+        <img src="assets/contact/email.svg" alt="Email Icon" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5">
+
+        <input type="email" placeholder="" data-i18n="contactEmailPlaceholder"
+          class="pl-12 pr-4 py-3 w-full md:w-96 h-10 rounded-lg bg-[#DDC7BB] placeholder-[#543E32] text-[#2B1B12] focus:outline-none" />
+      </div>
+      <button class="w-full md:w-auto px-8 py-2 rounded-lg bg-[#2B1B12] text-white font-medium hover:bg-[#3a271d]"
+        data-i18n="contactBtnSubmit">
+        Submit
+      </button>
+    </div>
   </div>
-  <button class="w-full md:w-auto px-8 py-2 rounded-lg bg-[#2B1B12] text-white font-medium hover:bg-[#3a271d]">
-    Submit
-  </button>
-</div>
-</div>
-   </section>
+</section>
 
 <!-- footer -->
 <div class="bg-[#DDC7BB] flex flex-wrap sm:justify-between md:justify-center p-12 md:gap-28">
   <!-- col 1 -->
   <div class="w-full md:w-auto mb-6 md:max-w-64">
     <img class="pb-4" src="assets/header/logo.svg" alt="logo">
-    <p class="font-bold">Bringing you closer to your dream home, one click at a time.</p>
+    <p class="font-bold" data-i18n="footerDesc">Bringing you closer to your dream home, one click at a time.</p>
   </div>
 
   <!-- col 2 -->
   <div class="w-full sm:w-1/2 md:w-auto flex flex-col gap-2 mb-6">
-    <p class="font-bold">About</p>
-    <a href="#"
-      class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Our
-      Story</a>
-    <a href="#"
-      class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Careers</a>
-    <a href="#"
-      class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Our
-      Team</a>
-    <a href="#"
-      class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Resources</a>
+    <p class="font-bold" data-i18n="footerAbout">About</p>
+    <a href="#" data-i18n="footerOurStory">Our Story</a>
+    <a href="#" data-i18n="footerCareers">Careers</a>
+    <a href="#" data-i18n="footerOurTeam">Our Team</a>
+    <a href="#" data-i18n="footerResources">Resources</a>
   </div>
 
   <!-- col 3 -->
   <div class="w-full sm:w-1/2 md:w-auto flex flex-col gap-2 mb-6">
-    <p class="font-bold">Support</p>
-    <a href="#"
-      class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">FAQ</a>
-    <a href="#"
-      class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Contact
-      Us</a>
-    <a href="#"
-      class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Help
-      Center</a>
-    <a href="#"
-      class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Terms
-      of Service</a>
+    <p class="font-bold" data-i18n="footerSupport">Support</p>
+    <a href="#" data-i18n="footerFAQ">FAQ</a>
+    <a href="#" data-i18n="footerContactUs">Contact Us</a>
+    <a href="#" data-i18n="footerHelpCenter">Help Center</a>
+    <a href="#" data-i18n="footerTerms">Terms of Service</a>
   </div>
 
   <!-- col 4 -->
   <div class="w-full sm:w-1/2 md:w-auto flex flex-col gap-2 mb-6">
-    <p class="font-bold">Find Us</p>
-    <a href="#"
-      class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Events</a>
-    <a href="#"
-      class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Locations</a>
-    <a href="#"
-      class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Newsletter</a>
+    <p class="font-bold" data-i18n="footerFindUs">Find Us</p>
+    <a href="#" data-i18n="footerEvents">Events</a>
+    <a href="#" data-i18n="footerLocations">Locations</a>
+    <a href="#" data-i18n="footerNewsletter">Newsletter</a>
   </div>
 
   <!-- col 5 -->
-  <div class="w-full sm:w-1/2 md:w-auto flex flex-col gap-2 mb-6 ">
-    <p class="font-bold">Our Social</p>
-    <div class="flex flex-row justify-between items-center ">
-      <img  src="assets/footer/instagram.svg" alt="instagram">
-      <a href="#"
-        class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Instagram</a>
+  <div class="w-full sm:w-1/2 md:w-auto flex flex-col gap-2 mb-6">
+    <p class="font-bold" data-i18n="footerSocial">Our Social</p>
+    <div class="flex flex-row justify-between items-center">
+      <img src="assets/footer/instagram.svg" alt="instagram">
+      <a href="#" data-i18n="footerInstagram">Instagram</a>
     </div>
     <div class="flex flex-row justify-between items-center">
       <img src="assets/footer/facebook.svg" alt="facebook">
-      <a href="#"
-        class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Facebook</a>
+      <a href="#" data-i18n="footerFacebook">Facebook</a>
     </div>
     <div class="flex flex-row justify-between items-center">
       <img src="assets/footer/X.svg" alt="Twitter (x)">
-      <a href="#"
-        class="relative after:block after:w-0 after:h-[2px] after:bg-[#2B1B12] after:transition-all after:duration-300 hover:after:w-full">Twitter
-        (x)</a>
+      <a href="#" data-i18n="footerTwitter">Twitter (x)</a>
     </div>
   </div>
 </div>
 
 
-
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 <script src="script.js"></script>
 </body>
 </html>
