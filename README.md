@@ -173,7 +173,7 @@ All styles are in `/css/style.css`. You can customize sections like:
 
 ---
 
-## 🧑‍💻 Your Name
+## 🧑‍💻 Yumna
 
 **Dwello Real Estate Landing Page**
 Designed for modern real estate platforms and agencies.
